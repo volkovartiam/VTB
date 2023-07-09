@@ -1,0 +1,12 @@
+CREATE TABLE customers_products (
+	customer_id INTEGER NOT NULL,
+	product_id INTEGER,
+	CONSTRAINT fk_customer_id
+		FOREIGN KEY(customer_id)
+			REFERENCES customers(id) ,
+	CONSTRAINT fk_product_id
+		FOREIGN KEY(product_id)
+			REFERENCES products(id) );
+
+SELECT * FROM customers_products;
+
