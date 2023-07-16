@@ -15,7 +15,10 @@ public class CountDownLatch_Ex2 {
             new Thread( ()-> {
                 try {
                     Thread.sleep(500 + (int)(500 * Math.random()));
+
+                    System.out.println("countDownLatch.getCount() " + countDownLatch.getCount() );
                     countDownLatch.countDown();
+
                     System.out.println("Thread " + w + "- готов.");
                 }catch (InterruptedException e){
                     e.printStackTrace();

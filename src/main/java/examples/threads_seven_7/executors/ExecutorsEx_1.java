@@ -1,6 +1,5 @@
-package examples.threads_seven_7.exeutors;
+package examples.threads_seven_7.executors;
 
-import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

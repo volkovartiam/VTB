@@ -1,4 +1,4 @@
-package examples.threads_seven_7.exeutors;
+package examples.threads_seven_7.executors;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
