@@ -10,7 +10,7 @@ public class ReflectionEx_2 {
 		Class catClass = Cat.class;
 		Field[] fields = catClass.getFields();
 		for (Field field : fields) {
-			System.out.println("Тип поля и имя поля " + field.getType().getName() + " и " + field.getName() );
+			System.out.println("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ " + field.getType().getName() + " пїЅ " + field.getName() );
 			//System.out.println( field );
 		}
 
@@ -18,7 +18,7 @@ public class ReflectionEx_2 {
 		System.out.println("All fields:");
 		Field[] privateFields = catClass.getDeclaredFields();
 		for (Field field : privateFields) {
-			//System.out.println("Тип поля и имя поля " + field.getType().getName() + " и " + field.getName() );
+			//System.out.println("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ " + field.getType().getName() + " пїЅ " + field.getName() );
 			System.out.println( field );
 		}
 		
@@ -26,7 +26,7 @@ public class ReflectionEx_2 {
 		try {
 			Cat cat = new Cat();
 			Field fieldName = cat.getClass().getField( "name" );
-			fieldName.set(cat, "Мурзик" );
+			fieldName.set(cat, "пїЅпїЅпїЅпїЅпїЅпїЅ" );
 			Field fieldAge = cat.getClass().getField( "age" );
 			System.out.println(fieldAge.get(cat));
 		} catch (NoSuchFieldException | IllegalAccessException e) {

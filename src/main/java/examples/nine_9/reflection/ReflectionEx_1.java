@@ -7,9 +7,9 @@ public class ReflectionEx_1 {
 	
 		Class s = String.class;
 	
-		System.out.println("Полное имя класса " + s.getName() );
-		System.out.println("Простое имя класса " + s.getSimpleName() );
-		System.out.println("toString для класса " + s.toString() );
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ " + s.getName() );
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ " + s.getSimpleName() );
+		System.out.println("toString пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ " + s.toString() );
 
 		
 		Class strClass = String.class;
