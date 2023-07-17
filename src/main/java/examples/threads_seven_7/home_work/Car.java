@@ -44,17 +44,16 @@ public class Car implements Runnable {
             Thread.sleep(500 + (int)(Math.random() * 800));
             System.out.println(this.name + " готов");
             cyclicBarrierStart.await();
-            cyclicBarrierStart.reset();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         for (int i = 0; i < race.getStages().size(); i++) {
             race.getStages().get(i).go(this);
         }
 
         position = CARS_COUNT - countDownLatch.getCount() + 1; // + 1 для начала отсчета с единицы
         countDownLatch.countDown();
-
 
         try {
             countDownLatch.await();
@@ -68,6 +67,5 @@ public class Car implements Runnable {
             e.printStackTrace();
         }
     }
-
 
 }

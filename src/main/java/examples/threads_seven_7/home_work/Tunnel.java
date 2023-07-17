@@ -6,14 +6,12 @@ public class Tunnel extends Stage{
 
     Semaphore semaphore;
 
-    public void setSemaphore(Semaphore semaphore) {
-        this.semaphore = semaphore;
-    }
-
-    public Tunnel() {
+    public Tunnel(int numbersOfCars) {
         this.length = 80;
         this.description = "Тоннель " + length + " метров";
+        semaphore = new Semaphore(numbersOfCars/2);
     }
+
     @Override
     public void go(Car c) {
         try {
