@@ -1,21 +1,20 @@
 package examples.threads_seven_7.home_work;
 
-import java.util.concurrent.BrokenBarrierException;
+import lombok.Setter;
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 
+
 public class Car implements Runnable {
 
-    CyclicBarrier cyclicBarrier;
+    @Setter
+    CyclicBarrier cyclicBarrierStart;
+    @Setter
+    CyclicBarrier cyclicBarrierStop;
+    @Setter
     CountDownLatch countDownLatch;
 
-    public void setCyclicBarrier(CyclicBarrier cyclicBarrier) {
-        this.cyclicBarrier = cyclicBarrier;
-    }
-
-    public void setCountDownLatch(CountDownLatch countDownLatch) {
-        this.countDownLatch = countDownLatch;
-    }
 
     private static long CARS_COUNT;
     static {
@@ -44,7 +43,8 @@ public class Car implements Runnable {
             System.out.println(this.name + " готовится");
             Thread.sleep(500 + (int)(Math.random() * 800));
             System.out.println(this.name + " готов");
-            cyclicBarrier.await();
+            cyclicBarrierStart.await();
+            cyclicBarrierStart.reset();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,14 +54,17 @@ public class Car implements Runnable {
 
         position = CARS_COUNT - countDownLatch.getCount() + 1; // + 1 для начала отсчета с единицы
         countDownLatch.countDown();
+
+
         try {
             countDownLatch.await();
+            cyclicBarrierStop.await();
             if(position == 1){
-                System.out.println(name + "win!!!");
+                System.out.println(name + " Win!!!");
             } else {
                 System.out.println(name + " занял место № " + position);
             }
-        }catch ( /* InterruptedException*/ Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
