@@ -9,5 +9,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Target(METHOD)
 public @interface AdvancedAnnotation {
-	float value() default 5.0f;
+	float value()	 default 5.0f;
 }

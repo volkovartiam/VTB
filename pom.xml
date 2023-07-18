@@ -48,7 +48,7 @@
       <version>6.1.7.Final</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql  -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>

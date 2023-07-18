@@ -1,0 +1,5 @@
+id			name			author
+-----------------------------------
+1			Effective Java			Joshua Bloch
+2			Java Concurrency in Practice			Brian Goetz
+3			Современное визуальное программирование			Талипов С.Н.

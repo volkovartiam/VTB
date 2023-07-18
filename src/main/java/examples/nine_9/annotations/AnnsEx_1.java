@@ -1,5 +1,6 @@
 package examples.nine_9.annotations;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 public class AnnsEx_1 {
@@ -14,8 +15,11 @@ public class AnnsEx_1 {
 		for (Method o : methods) {
 			if(o.getAnnotation(MarkingAnnotation.class) != null ) {
 				System.out.println( o );
+				for(Annotation annotation : o.getAnnotations()){
+					System.out.println(annotation.annotationType() );
+				}
 			}
 		}
-
 	}
+
 }
