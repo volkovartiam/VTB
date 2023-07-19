@@ -1,1 +1,39 @@
-CREATE TABLE I
+DROP TABLE IF EXISTS ave.students;
+
+CREATE TABLE ave.students(id BIGSERIAL NOT NULL PRIMARY KEY,
+						  name VARCHAR(50) NOT NULL,
+						  pass_series NUMERIC(4),
+						  pass_number NUMERIC(6) 	);
+
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (1, 'Ivan Petrov', 1111, 123456 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (2, 'Ivan Sidorov', 1112, 123457 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (3, 'Anna Shulz', 1113, 123458 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (4, 'Roman Volkov', 1114, 123459 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (5, 'Artem Volkov', 4444, 345123 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (6, 'Ramy Zaicman', 4445, 345124 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (7, 'Aleksey Ivanov', 4446, 345125 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (8, 'Fedor Petrov', 3232, 322321 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (9, 'Robert Filatov', 3233, 322323 ) RETURNING*;
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (10, 'Olga Ivanova', 3234, 322324 ) RETURNING*;
+
+SELECT * FROM ave.students;

@@ -1,0 +1,42 @@
+SELECT * FROM ave.progress WHERE score < 2;
+
+/* Output:
+44	6	1	1
+46	6	2	1
+48	6	4	1
+58	10	2	1
+*/
+
+/* // При попытке выполнения команды
+ALTER TABLE ave.progress ADD CONSTRAINT check_score CHECK (score>1 AND score<6 );
+*/
+/* // возникает следующая ошибка
+ERROR: ОШИБКА:  ограничение-проверку "check_score" отношения "progress" нарушает некоторая строка
+*/
+
+UPDATE ave.progress SET score = 2 WHERE score < 2;
+SELECT * FROM ave.progress WHERE ID = 44 OR ID = 46 OR ID = 48 OR ID = 58;
+
+/*Output
+44	6	1	2
+46	6	2	2
+48	6	4	2
+58	10	2	2
+*/
+
+
+ALTER TABLE ave.progress DROP CONSTRAINT IF EXISTS check_score;
+ALTER TABLE ave.progress ADD CONSTRAINT check_score CHECK (score>1 AND score<6 );
+/*
+ALTER TABLE
+Query returned successfully in 152 msec.
+*/
+
+
+/**/
+INSERT INTO ave.progress (id, student_id, subject_id, score)
+		   VALUES (58, 10, 2, 1 ) RETURNING*;
+/*
+ERROR: ОШИБКА:  новая строка в отношении "progress" нарушает ограничение-проверку "check_score"
+DETAIL:  Ошибочная строка содержит (58, 10, 2, 1).
+*/

@@ -1,0 +1,19 @@
+SELECT students.id, students.name, AVG(progress.score) 
+		FROM ave.students INNER JOIN ave.progress 
+								ON students.id = progress.student_id
+		GROUP BY students.id, students.name
+		ORDER BY students.id;
+
+/* Output
+1	"Ivan Petrov"	4.8571428571428571
+2	"Ivan Sidorov"	4.0000000000000000
+3	"Anna Shulz"	3.0000000000000000
+4	"Roman Volkov"	4.1428571428571429
+5	"Artem Volkov"	2.0000000000000000
+6	"Ramy Zaicman"	3.1428571428571429
+7	"Aleksey Ivanov"	4.5000000000000000
+8	"Fedor Petrov"	3.5000000000000000
+9	"Robert Filatov"	2.5000000000000000
+10	"Olga Ivanova"	2.0000000000000000
+*/
+

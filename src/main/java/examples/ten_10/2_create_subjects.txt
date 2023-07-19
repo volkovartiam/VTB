@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS ave.subjects;
+
+CREATE TABLE ave.subjects(id BIGSERIAL NOT NULL PRIMARY KEY,
+						  name VARCHAR(50) NOT NULL			 	);
+
+
+INSERT INTO ave.subjects (id, name) VALUES (1, 'Math' ) RETURNING*;
+INSERT INTO ave.subjects (id, name) VALUES (2, 'Physics' ) RETURNING*;
+INSERT INTO ave.subjects (id, name) VALUES (3, 'Literature' ) RETURNING*;
+INSERT INTO ave.subjects (id, name) VALUES (4, 'Chemistry' ) RETURNING*;
+
+INSERT INTO ave.subjects (id, name) VALUES (5, 'Philosophy' ) RETURNING*;
+INSERT INTO ave.subjects (id, name) VALUES (6, 'Sport' ) RETURNING*;
+INSERT INTO ave.subjects (id, name) VALUES (7, 'Music' ) RETURNING*;
+
+SELECT * FROM ave.subjects;

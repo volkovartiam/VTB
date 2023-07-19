@@ -1,0 +1,25 @@
+SELECT students.id, students.name, progress.score
+		FROM ave.students INNER JOIN ave.progress
+		ON students.id = progress.student_id
+		WHERE SCORE > 3
+		ORDER BY score DESC;
+
+
+SELECT students.id, students.name, progress.score
+		FROM ave.students INNER JOIN ave.progress
+		ON students.id = progress.student_id
+		WHERE SCORE > 3
+		GROUP BY students.id, score
+		ORDER BY students.id;
+
+
+SELECT students.id, students.name, subjects.name , progress.score
+		FROM ave.students INNER JOIN ave.progress
+								ON students.id = progress.student_id
+						  INNER JOIN ave.subjects
+								ON subjects.id = progress.subject_id
+		WHERE SCORE > 3 AND subjects.name = 'Sport'
+		GROUP BY students.id, subjects.name, score
+		ORDER BY students.id;
+
+

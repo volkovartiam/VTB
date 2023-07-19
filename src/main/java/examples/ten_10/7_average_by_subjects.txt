@@ -1,0 +1,55 @@
+SELECT students.id, students.name, subjects.name , progress.score
+		FROM ave.students INNER JOIN ave.progress
+								ON students.id = progress.student_id
+						  INNER JOIN ave.subjects
+								ON subjects.id = progress.subject_id
+		WHERE SCORE > 3 AND subjects.name = 'Sport'
+		GROUP BY students.id, subjects.name, score
+		ORDER BY students.id;
+
+/* Output
+1	"Ivan Petrov"	"Sport"	5
+2	"Ivan Sidorov"	"Sport"	4
+4	"Roman Volkov"	"Sport"	5
+6	"Ramy Zaicman"	"Sport"	4
+*/ /* Avg = (5 + 4 + 5 + 4) / 4 = 4.5 //  */
+
+SELECT subjects.name, AVG(progress.score)
+		FROM ave.progress INNER JOIN ave.subjects
+								ON subjects.id = progress.subject_id
+		WHERE SCORE > 3 AND subjects.name = 'Sport'
+		GROUP BY subjects.name;
+
+/* Output
+"Sport"	4.5000000000000000
+*/
+
+/*****************************************************************/
+SELECT students.id, students.name, subjects.name , progress.score
+		FROM ave.students INNER JOIN ave.progress
+								ON students.id = progress.student_id
+						  INNER JOIN ave.subjects
+								ON subjects.id = progress.subject_id
+		WHERE subjects.name = 'Sport'
+		GROUP BY students.id, subjects.name, score
+		ORDER BY students.id;
+
+/* Output
+1	"Ivan Petrov"	"Sport"	5
+2	"Ivan Sidorov"	"Sport"	4
+3	"Anna Shulz"	"Sport"	3
+4	"Roman Volkov"	"Sport"	5
+5	"Artem Volkov"	"Sport"	2
+6	"Ramy Zaicman"	"Sport"	4
+*//* 5 + 4 + 3 + 5 + 2 + 4 = 23 ; 23/6 = 3.8(3)*/
+
+SELECT subjects.name, AVG(progress.score)
+	FROM ave.progress INNER JOIN ave.subjects
+							ON subjects.id = progress.subject_id
+	WHERE subjects.name = 'Sport'
+	GROUP BY subjects.name;
+
+/*Output
+"Sport"	3.8333333333333333
+*/
+
