@@ -1,0 +1,17 @@
+SELECT subjects.name, score
+		FROM ave.subjects
+			INNER JOIN ave.progress
+				ON subjects.id = progress.subject_id
+				WHERE score > 3
+				ORDER BY subjects.name DESC;
+
+
+SELECT subjects.name, count(score) AS good_scores
+		FROM ave.subjects
+			INNER JOIN ave.progress
+				ON subjects.id = progress.subject_id
+				WHERE SCORE > 3
+				GROUP BY subjects.name
+				ORDER BY good_scores DESC
+				LIMIT 3;
+

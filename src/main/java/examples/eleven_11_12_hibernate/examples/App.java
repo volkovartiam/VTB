@@ -1,4 +1,4 @@
-package examples.eleven_11_12_hibernate.ex_1;
+package examples.eleven_11_12_hibernate.examples;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +19,14 @@ public class App {
         String del = " ";
         boolean run = true;
 
+
         while ( run ){
             System.out.println("Введите команду");
             Scanner scanner = new Scanner(System.in);
 
             unparsedCommand = scanner.nextLine();
             List<String> list = getParsedData(unparsedCommand, del);
-            //System.out.println(list);
+            // System.out.println(list);
 
             if( !list.isEmpty() || !list.equals(null) ){
                 command = list.get(0);
@@ -41,19 +42,19 @@ public class App {
             }
 
             switch (command) {
-                //    /showProductsByPerson Bob
+                //    /showProductsByPerson Person_1
                 case "/showProductsByPerson" :
                         dao.getCustomerByName(customerName);
                         //System.out.println("Show products by person/persons with name " + customerName);
                     break;
 
-                // /findPersonsByProductTitle prod_1
+                // /findPersonsByProductTitle Prod_3
                 case "/findPersonsByProductTitle" :
                     dao.findPersonsByProductTitle(productTitle);
                     System.out.println("Find persons by products title " + productTitle);
                     break;
 
-                // /removePerson Chad
+                // /removePerson Person_3
                 case "/removePerson" :
                     if(dao.removeCustomer(customerName) ){
                         System.out.println("Removed person with name " + customerName);
@@ -62,7 +63,7 @@ public class App {
                     }
                     break;
 
-                //  /removeProduct prod
+                //  /removeProduct Prod_2
                 case "/removeProduct" :
                     if(dao.removeProduct(productTitle) ){
                         System.out.println("Removed product with title " + productTitle);
@@ -71,8 +72,10 @@ public class App {
                     }
                     break;
 
+                //    /buy Person_6 Prod_3
                 case "/buy" :
-                    System.out.println("Customer " + customerName + " buy product "   + productTitle);
+                    dao.makeOrder(customerName, productTitle);
+                    //System.out.println("Customer " + customerName + " buy product "   + productTitle);
                     break;
 
                 case "/exit" :

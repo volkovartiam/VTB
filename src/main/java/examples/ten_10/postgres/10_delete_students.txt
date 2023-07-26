@@ -1,0 +1,27 @@
+/*
+ALTER TABLE ave.students 
+	DROP CONSTRAINT IF EXISTS delete_student_on_cascade, 
+	ADD CONSTRAINT delete_student_on_cascade 
+		FOREIGN KEY(id) REFERENCES ave.progress(student_id)
+		ON DELETE CASCADE;
+*/
+
+
+DELETE FROM ave.progress
+WHERE student_id IN (SELECT students.id FROM ave.students WHERE students.name = 'Artem Volkov' );
+
+DELETE FROM ave.progress WHERE student_id = 10;
+/**/
+
+
+SELECT students.id, students.name, subjects.name , progress.score
+		FROM ave.students INNER JOIN ave.progress
+								ON students.id = progress.student_id
+						  INNER JOIN ave.subjects
+								ON subjects.id = progress.subject_id
+		GROUP BY students.id, subjects.name, score
+		ORDER BY students.id;
+/*
+SELECT students.id FROM ave.students WHERE students.name = 'Artem Volkov';
+SELECT * FROM ave.students;
+*/		

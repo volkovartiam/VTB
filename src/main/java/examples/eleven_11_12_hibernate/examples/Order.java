@@ -1,4 +1,4 @@
-package examples.eleven_11_12_hibernate.ex_2;
+package examples.eleven_11_12_hibernate.examples;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,12 +22,8 @@ public class Order{
     @JoinColumn(name = "product_id" , insertable = false, updatable = false)
     Product product;
 
-
-
     @Column(name = "price")
     double price;
-
-
     @Override
     public String toString() {
         return "Order{" +
@@ -36,4 +32,5 @@ public class Order{
                 ", product=" + product +
                 '}';
     }
+
 }

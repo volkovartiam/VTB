@@ -1,4 +1,4 @@
-package examples.eleven_11_12_hibernate.ex_2;
+package examples.eleven_11_12_hibernate.examples;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,34 +6,34 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@Entity
+@Table(name = "products")
 @Data
 @NoArgsConstructor
-@Entity
-@Table(name = "customers")
-public class Customer {
+public class Product {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "title")
     private String name;
 
-    public Customer(String name) {
-        this.name = name;
-    }
+    @Column(name = "price")
+    private double price;
 
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "product")
     private List<Order> orders;
-
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
+
 }

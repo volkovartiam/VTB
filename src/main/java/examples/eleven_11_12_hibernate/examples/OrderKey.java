@@ -1,4 +1,4 @@
-package examples.eleven_11_12_hibernate.ex_2;
+package examples.eleven_11_12_hibernate.examples;
 
 import jakarta.persistence.*;
 import lombok.Data;

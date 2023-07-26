@@ -1,0 +1,53 @@
+
+DROP TABLE IF EXISTS ave.catalogs;
+CREATE TABLE ave.catalogs (
+	id SERIAL NOT NULL,
+    title VARCHAR(100) DEFAULT NULL,
+    PRIMARY KEY(id)
+);
+
+DROP TABLE IF EXISTS ave.readers;
+CREATE TABLE ave.readers (
+	id SERIAL NOT NULL,
+    name VARCHAR(80) DEFAULT NULL,
+    PRIMARY KEY(id)
+);
+
+
+DROP TABLE IF EXISTS ave.authors;
+CREATE TABLE ave.authors (
+	id SERIAL NOT NULL,
+    name VARCHAR(80) DEFAULT NULL,
+    PRIMARY KEY(id)
+);
+
+DROP TABLE IF EXISTS ave.books;
+CREATE TABLE ave.books (
+	id SERIAL NOT NULL,
+    title VARCHAR(100) DEFAULT NULL,
+    author_id INTEGER DEFAULT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT FK_AUTH_ID FOREIGN KEY (author_id)
+    REFERENCES ave.authors (id)
+);
+
+
+
+
+CREATE TABLE ave.books_readers (
+	book_id INTEGER NOT NULL,
+    reader_id INTEGER NOT NULL,
+
+    PRIMARY KEY (book_id, reader_id),
+
+    CONSTRAINT FK_BOOK FOREIGN KEY (book_id)
+    REFERENCES ave.books (id)
+    ON DELETE NO ACTION ON UPDATE NO ACTION,
+
+    CONSTRAINT FK_READER FOREIGN KEY (reader_id)
+    REFERENCES ave.readers (id)
+    ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+

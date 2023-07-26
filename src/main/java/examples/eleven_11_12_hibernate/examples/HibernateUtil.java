@@ -1,4 +1,4 @@
-package examples.eleven_11_12_hibernate.ex_2;
+package examples.eleven_11_12_hibernate.examples;
 
 import org.hibernate.SessionFactory;
 
@@ -11,7 +11,7 @@ public class HibernateUtil {
     static SessionFactory getSessionFactory(){
         if(factory == null ){
             factory = new Configuration()
-                    .configure("eleven_11_hibernate/hibernate-two.cfg.xml")
+                    .configure("eleven_11_hibernate/hibernateApp.cfg.xml")
                     .buildSessionFactory();
         }
         return factory;

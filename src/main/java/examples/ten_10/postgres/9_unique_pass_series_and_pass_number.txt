@@ -1,0 +1,22 @@
+DELETE FROM ave.students
+	WHERE students.id = 1000 OR students.id = 1001;
+
+ALTER TABLE ave.students DROP CONSTRAINT IF EXISTS check_pass;
+ALTER TABLE ave.students ADD CONSTRAINT check_pass UNIQUE(pass_series, pass_number );
+
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (1000, 'Students_1', 9999, 999999);
+
+/*
+INSERT INTO ave.students (id, name, pass_series, pass_number)
+	   VALUES (1001, 'Students_1', 9999, 999999);
+
+ERROR: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "check_pass"
+DETAIL:  Ключ "(pass_series, pass_number)=(9999, 999999)" уже существует.
+*/
+
+SELECT * FROM ave.students;
+DELETE FROM ave.students
+	WHERE students.id = 1000 OR students.id = 1001 RETURNING*;
+
+

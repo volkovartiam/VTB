@@ -1,9 +1,8 @@
-package examples.eleven_11_12_hibernate.ex_1;
+package examples.eleven_11_12_hibernate.examples;
 
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceException;
 import jakarta.persistence.Query;
-
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,7 +11,7 @@ import java.util.List;
 
 public class DAO {
 
-    private SessionFactory factory;
+    private final SessionFactory factory;
 
     public DAO(){
         factory = HibernateUtil.getSessionFactory();
@@ -96,7 +95,12 @@ public class DAO {
             query.setParameter("paramName", name);
             Customer customer = (Customer) query.setMaxResults(1).getSingleResult();
             System.out.println( "List of products by customer " + name );
-            System.out.println( customer.getProducts() );
+
+            List<Order> orders = customer.getOrders();
+            orders.forEach( o ->
+                    System.out.println( "Products for customer " + customer.getName() +
+                           " " + o.getProduct().toString() ) );
+
             session.getTransaction().commit();
         }catch (HibernateException | NoResultException e){
             e.printStackTrace();
@@ -112,7 +116,11 @@ public class DAO {
             query.setParameter("paramName", title);
             Product product = (Product) query.setMaxResults(1).getSingleResult();
             System.out.println( "List of customers by product " + title );
-            System.out.println( product.getCustomers() );
+            List<Order> orders = product.getOrders();
+
+            for (Order o: orders) {
+                System.out.println( o.getCustomer() + " " );
+            }
             session.getTransaction().commit();
         }catch (HibernateException | NoResultException e){
             e.printStackTrace();
@@ -128,84 +136,38 @@ public class DAO {
             query.setParameter("paramName", title);
             Product product = (Product) query.setMaxResults(1).getSingleResult();
 
-
             Query newQuery = session.createQuery("from Customer where name =: paramName");
             newQuery.setParameter("paramName", name);
+
+            System.out.println();
+            System.out.println();
+            System.out.println(product);
             Customer customer = (Customer) newQuery.setMaxResults(1).getSingleResult();
+            System.out.println();
+            System.out.println();
+            System.out.println(customer);
 
-            /*
-            Order order
+            OrderKey orderKey = new OrderKey();
+            orderKey.setCustomerId(customer.getId());
+            orderKey.setProductId(product.getId());
 
-            session.save(object);
-            */
+            Order order = new Order();
+            order.setOrderKey(orderKey);
+            order.setCustomer(customer);
+            order.setProduct(product);
+
+            order.setPrice(product.getPrice());
+            session.save(order);
+
+            System.out.println();
+            System.out.println( "Order = "  + order );
+            System.out.println();
+
             session.getTransaction().commit();
 
-            System.out.println( "List of customers by product " + title );
-            System.out.println( product.getCustomers() );
-            session.getTransaction().commit();
         }catch (HibernateException | NoResultException e){
             e.printStackTrace();
         }
-    }
-
-
-
-
-
-    public  Product getProductByName(String name){
-        try( Session session = factory.getCurrentSession() ){
-
-            Query query = session.createQuery("from Product where name =: paramName");
-            query.setParameter("paramName", name);
-            Product prodeuct = (Product) query.getSingleResult();
-            session.getTransaction().commit();
-            return prodeuct;
-        }catch (HibernateException | NoResultException e){
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-
-    public static void showProductsByPerson(Customer customer){
-        System.out.println("\n" + "List of products by selected customer");
-        List<Product> products = customer.getProducts() ;
-        for ( Product p : products ){
-            System.out.println( p.getId() + " " + p.getName() + " " + p.getPrice() );
-        }
-    }
-
-    public static void findPersonsByProductTitle(Product product){
-        System.out.println("\n" + "List of customers by selected product");
-        List<Customer> customers = product.getCustomers() ;
-        for ( Customer c : customers ){
-            System.out.println( c.getId()  + " " + c.getName()  );
-        }
-    }
-
-
-    public void getCustomersByName(String name) {
-
-            Session session = factory.getCurrentSession();
-            session.beginTransaction();
-            Query query = session.createQuery("from Customer where name =: paramName");
-            query.setParameter("paramName", name);
-            List<Customer> list = query.getResultList();
-            if (!list.isEmpty()) {
-                System.out.println("Customers with name " + name + ": ");
-                for (Customer c : list) {
-                    System.out.println(c);
-                }
-            } else {
-                System.out.println("In this database no customers with name: " + name);
-            }
-            session.getTransaction().commit();
-
-        /*finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        } */
     }
 
 
