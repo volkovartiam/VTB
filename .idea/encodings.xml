@@ -3,14 +3,18 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1251">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/eight_8/streams/StreamEx_3.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate/MainClass.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_four/MainClass.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_three/MainClass.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate_three/hibernate/MainClass.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Doc.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Validator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Verifiable.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/threads_seven_7/multithreading" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/eight_8/annotations/AdvancedAnnotation.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/eleven_11_hibernate/hibernate.cfg.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/eleven_11_hibernate/hibernate.cfg.xml" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

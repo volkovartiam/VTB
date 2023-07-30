@@ -1,0 +1,11 @@
+
+DROP TABLE IF EXISTS ave.items;
+CREATE TABLE ave.items (
+	id SERIAL NOT NULL,
+    name VARCHAR(80) DEFAULT NULL,
+    PRIMARY KEY(id)
+);
+
+
+CREATE TABLE ave.items(id BIGSERIAL NOT NULL PRIMARY KEY,
+				   val NUMERIC							);

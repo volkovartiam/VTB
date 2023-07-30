@@ -1,0 +1,3 @@
+
+CREATE TABLE ave.items(id BIGSERIAL NOT NULL PRIMARY KEY,
+				   val NUMERIC							);
