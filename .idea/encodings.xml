@@ -4,17 +4,60 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/eight_8/streams/StreamEx_3.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate/MainClass.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_four/MainClass.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_three/MainClass.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate_three/hibernate/MainClass.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate/MainClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_four/MainClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate/hibernate_three/MainClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/eleven_11_12_hibernate_three/hibernate/MainClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/SpringBootApp.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/configuration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/controllers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/entity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/repositories" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/fourteen_14_spring_boot/service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Doc.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Validator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Verifiable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/App.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/AppConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/BlackAndWhiteCameraRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/Camera.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/CameraImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/CameraRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/ColorCameraRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/PhotocameraTestBeanPostProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/TestBeanFactoryPostProc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/UnproducableCameraRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_4/App.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_4/AppConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_4/HelloMan.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_4/HelloManOnceSay.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/AppConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/Cart.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/HomeWorkApp.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/OrderService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/Product.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/ProductService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AnimalsClassNameGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AnnotatedBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AppConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AppSpring.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/ClassNameGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/CodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/CppCodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/JavaCodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/ShapesClassNameGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/SimpleBean.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/threads_seven_7/multithreading" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/eight_8/annotations/AdvancedAnnotation.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/eleven_11_hibernate/hibernate.cfg.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/fourteen_14_spring_boot/application.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/fourteen_14_spring_boot/templates" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/thirteen_spring_core/config.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/thirteen_spring_core/config_three.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/thirteen_spring_core/config_two.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/thirteen_spring_core/new_config_one.xml" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>
