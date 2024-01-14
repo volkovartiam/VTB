@@ -26,15 +26,17 @@ public class App {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         CodeCreator javaCC = context.getBean("javaCodeCreator", CodeCreator.class);
-        System.out.println(javaCC.getClassExample());
+        System.out.println("javaCC.getClassExample()" + javaCC.getClassExample());
 
         SimpleBean simpleBean = context.getBean("simpleBean", SimpleBean.class);
+        System.out.println("do something");
         simpleBean.doSomething();
 
         CodeCreator javaCodeCreator = context.getBean("javaCodeCreator", CodeCreator.class);
-        System.out.println(javaCodeCreator.getClassExample());
+        System.out.println("javaCC.getClassExample()" + javaCodeCreator.getClassExample());
 
         AnnotatedBean annotatedBean = context.getBean("annotatedBean", AnnotatedBean.class);
+        System.out.println("annotatedBean.example()");
         annotatedBean.example();
 
         ((AnnotationConfigApplicationContext) context).close();

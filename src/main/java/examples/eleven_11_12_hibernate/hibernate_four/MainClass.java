@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
 
 public class MainClass {
 
-    private static final int NUMBER_OF_THREADS = 8;
+    private static final int NUMBER_OF_THREADS = 4;
 
 
     public static void main(String[] args) {
@@ -70,10 +70,11 @@ public class MainClass {
             }
             try {
                 countDownLatch.await();
+                System.out.println("End");
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
-            System.out.println("End");
+
         }
     }
 

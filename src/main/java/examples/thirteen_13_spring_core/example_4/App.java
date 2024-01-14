@@ -10,7 +10,7 @@ public class App
     public static void main( String[] args ) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("thirteen_spring_core/new_config_one.xml");
-//        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        //ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         HelloMan man = context.getBean("man", HelloMan.class );
         man.helloSay();

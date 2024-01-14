@@ -12,10 +12,10 @@ public class AppConfig {
     /*
     @Bean(name = "man")
     public HelloMan helloManOnceSay(@Value("Volkov Artem") String name) {
-        HelloManOnceSay man = new HelloManOnceSay(name);
+        HelloMan man = new HelloManOnceSay(name);
         return man;
     }
-     */
+*/
 
     /*
     @Bean(name = "man")
@@ -24,8 +24,5 @@ public class AppConfig {
         man.setName(name);
         return man;
     }
-
-     */
-
-
+    */
 }

@@ -16,6 +16,11 @@ public class HomeWorkApp {
         System.out.println(product);
 
         OrderService orderService = context.getBean("orderService", OrderService.class);
+
+        orderService.cart.add(product);
         orderService.makeOrder();
+
+
+
     }
 }
