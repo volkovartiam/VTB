@@ -24,9 +24,10 @@ public class CountDownLatchApp {
 
         try {
             countDownLatch.await();
+            System.out.println("Работа завершена");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Работа завершена");
+
     }
 }

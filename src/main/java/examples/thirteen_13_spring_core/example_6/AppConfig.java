@@ -1,10 +1,13 @@
 package examples.thirteen_13_spring_core.example_6;
 
+import examples.thirteen_13_spring_core.example_6.codeCreater.CodeCreator;
+import examples.thirteen_13_spring_core.example_6.codeCreater.JavaCodeCreator;
+import examples.thirteen_13_spring_core.example_6.generator.AnimalsClassNameGenerator;
+import examples.thirteen_13_spring_core.example_6.generator.ClassNameGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 @ComponentScan("examples.thirteen_13_spring_core.example_6")
 public class AppConfig {
     /*

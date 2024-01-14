@@ -13,7 +13,7 @@ public class ThreadExample_2_WithLock {
 	}
 	
 	
-	public synchronized void method1() {
+	public void method1() {
 		int counter = threadCounter;
 		threadCounter++;
 		System.out.println("Block-1 - begin");

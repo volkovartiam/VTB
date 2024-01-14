@@ -11,8 +11,9 @@ public class ExecutorsEx_2 {
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         Future future = executorService.submit( () -> print("1") );
-        future.get();
+        //future.get();
 
+        System.out.println( future.get() );
         System.out.print("Other task");
         print("5");
     }

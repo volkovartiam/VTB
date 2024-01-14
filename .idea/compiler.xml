@@ -13,7 +13,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="VTB" options="-parameters" />
+      <module name="VTB" options="" />
     </option>
   </component>
 </project>

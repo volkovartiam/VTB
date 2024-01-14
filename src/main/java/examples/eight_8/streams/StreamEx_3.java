@@ -68,7 +68,7 @@ public class StreamEx_3 {
 		int nMostAgedPerson = 5;
 		String st = Arrays.stream( persons )
 			.sorted( (o1, o2) -> o2.age - o1.age )
-			.map( (Function<Person, String>) person -> person.name )
+			.map( /*(Function<Person, String>)*/ person -> person.name )
 			.limit( nMostAgedPerson )
 			.collect( Collectors.joining(", ", "N most oldest persons: ", "." ) );
 		System.out.println(st);

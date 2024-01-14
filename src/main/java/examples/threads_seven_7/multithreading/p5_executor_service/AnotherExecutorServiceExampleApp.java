@@ -8,7 +8,7 @@ public class AnotherExecutorServiceExampleApp {
         Future<String> future = service.submit(new Callable<String>() {
             @Override
             public String call() throws Exception {
-                Thread.sleep(3000);
+                Thread.sleep(300);
                 return "Java";
             }
         });

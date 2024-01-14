@@ -15,7 +15,6 @@ public class Validator implements Doc {
         Field[] fields = clazz.getDeclaredFields(); //Получил все поля класса
 
         for (Field field : fields) {
-
             field.setAccessible(true); // разрешил доступ к private полям
             Object value = field.get(obj); //Получил значение поля
             checkAnnotation(field, value);
@@ -31,21 +30,17 @@ public class Validator implements Doc {
         for (Annotation annotation : annotations) {
 
             if (value instanceof Number) { //Это Number!
-
                 if (annotation != null && annotation.annotationType().equals(Max.class)) {
                     Max max = (Max) annotation;
                     System.out.println("max = " + max.length());
-
-
-                    if ((((Number) value).doubleValue()) - max.length() > 0.00001) {
-                        System.out.println(field + ": " + value + " > " + "max.length() = " + max.length() +" " +true);
+                    if ( ( (Number)value).doubleValue()  - max.length() > 0.001) {
+                        System.out.println(field + ": " + value + " > " + "max.length() = " + max.length() +" " + true);
                         return false;
                     }
                 }
                 if (annotation != null && annotation.annotationType().equals(Min.class)) {
                     Min min = (Min) annotation;
-
-                    if (((Number) value).doubleValue() - min.length() < 0.00001) {
+                    if ( ( (Number)value).doubleValue() - min.length() < 0.001) {
                         System.out.println(field + ": " + value + " < " + "min.length() = " + min.length() + " " + false);
                         return false;
                     }
@@ -53,9 +48,7 @@ public class Validator implements Doc {
             }
 
             if (value instanceof Collection) {
-
                 if (annotation != null && annotation.annotationType().equals(NotEmpty.class)) {
-
                     if (((Collection) value).size() == 0) {
                         System.out.println(field + " is empty");
                         return false;
@@ -64,14 +57,12 @@ public class Validator implements Doc {
             }
             if (value instanceof String) {
                 if (value != null && annotation != null && annotation.annotationType().equals(Regexp.class)) {
-                    Regexp regexp = (Regexp) annotation;
 
+                    Regexp regexp = (Regexp) annotation;
                     Pattern p = Pattern.compile(regexp.reg());
                     Matcher m = p.matcher((CharSequence) value);
                     System.out.println(field +" " + m.matches());
                     return (m.matches());
-
-
                 }
             }
             if ((value == null) && (annotation != null && annotation.annotationType().equals(NotNull.class))) {
@@ -82,14 +73,11 @@ public class Validator implements Doc {
         return true;
     }
 
-
-
     public static void main(String[] args) throws IllegalAccessException, NoSuchMethodException {
-
         Verifiable ver = new Verifiable();
         Validator validator = new Validator();
-        ver.pow(55, 12);
+        System.out.println( ver.pow(2, -3) );
         validator.validate(ver);
-
     }
+
 }

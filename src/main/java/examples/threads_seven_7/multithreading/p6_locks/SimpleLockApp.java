@@ -16,7 +16,7 @@ public class SimpleLockApp {
                     lock.lock();
                     System.err.println("T-GET-LOCK-FIRST");
                     try {
-                        Thread.sleep(8000);
+                        Thread.sleep(6000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -36,7 +36,7 @@ public class SimpleLockApp {
                         try {
                             System.err.println("T-LOCK-SECTION-SECOND");
                             try {
-                                Thread.sleep(13000);
+                                Thread.sleep(3000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }

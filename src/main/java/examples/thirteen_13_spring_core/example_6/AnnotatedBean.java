@@ -9,6 +9,7 @@ public class AnnotatedBean {
     SimpleBean simpleBean;
 
     public void example() {
+        System.out.println("Annoted bean");
         simpleBean.doSomething();
     }
 }

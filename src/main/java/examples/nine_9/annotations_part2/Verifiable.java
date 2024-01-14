@@ -32,21 +32,21 @@ public class Verifiable implements Doc {
 
     @Max (length = 500_000)
     @Min (length = 0)
-    public int pow(int a, int b) {
-        if (a > 0) {
-            for (int i = 1; a > b; i++) {
-
-                a *= a;
+    public double pow(int a, int b) {
+        double answer = a;
+        if (b > 0) {
+            for (int i = 1; i < b; i++) {
+                answer = a * answer;
             }
         }
-        if (a < 0) {
-            for (int i = 0; a > b; i++) {
-                a /= a;
+        else if (b < 0) {
+            answer = 1;
+            if(a != 0){
+                for (int i = 0; i < Math.abs(b); i++) {
+                    answer = answer * 1/a;;
+                }
             }
         }
-        else {
-            return 0;
-        }
-        return a;
+        return answer;
     }
 }

@@ -19,8 +19,8 @@ public class StatsDemoApp {
 		Stats<String> strStats = new Stats<>("1", "2", "3", "4", "5", "6");
 		*/
 		
-		if(intStats.sameAvg(doubleStats) ) {
-		//if(intStats.sameAvg(intAnotherStats) ) {
+		//if(intStats.sameAvg(doubleStats) ) {
+		if(intStats.sameAvg(intAnotherStats) ) {
 			System.out.println("Averages is equals");
 		} else {
 			System.out.println("Averages is NOT equals");

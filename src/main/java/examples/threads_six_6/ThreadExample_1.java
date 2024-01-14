@@ -28,7 +28,7 @@ public class ThreadExample_1 {
 		System.out.println("method2 start");
 		for(int i = 0; i < 10; i++) {
 			try {
-				Thread.sleep(100);
+				Thread.sleep(200);
 				System.out.println("new thread method2 "  + " "+ i);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

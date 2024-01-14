@@ -37,7 +37,7 @@ public class Box<T extends Fruit> {
 			fruitsFromBoxes.removeAll(fruitsFromBoxes);
 			
 		} else {
-			System.out.println("In boxes differnts fruits" );
+			System.out.println("In boxes differents fruits" );
 		}
 	}
 }

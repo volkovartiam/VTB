@@ -3,6 +3,7 @@ package examples.threads_seven_7.multithreading.p3_synchronization.double_counte
 public class SynchCounterApp {
     public static void main(String[] args) {
         SynchDoubleCounter synchDoubleCounter = new SynchDoubleCounter();
+        //NotCorrectSynchDoubleCounter synchDoubleCounter = new NotCorrectSynchDoubleCounter();
 
         new Thread(() -> {
             for (int i = 0; i < 5; i++) {

@@ -17,6 +17,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Doc.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Validator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/nine_9/annotations_part2/Verifiable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/ten_10/postgresHomemade/PostgresConnectionApp.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/ten_10/postgresHomemade/PostgresSavepointApp.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/App.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_3/AppConfig.java" charset="UTF-8" />
@@ -38,16 +40,16 @@
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/OrderService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/Product.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_5/ProductService.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AnimalsClassNameGenerator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AnnotatedBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/App.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AppConfig.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/AppSpring.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/ClassNameGenerator.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/CodeCreator.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/CppCodeCreator.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/JavaCodeCreator.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/ShapesClassNameGenerator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/SimpleBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/codeCreater/CodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/codeCreater/CppCodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/codeCreater/JavaCodeCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/generator/AnimalsClassNameGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/generator/ClassNameGenerator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/examples/thirteen_13_spring_core/example_6/generator/ShapesClassNameGenerator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/examples/threads_seven_7/multithreading" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/eight_8/annotations/AdvancedAnnotation.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
